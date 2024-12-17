@@ -6,68 +6,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <script src="https://cdn.tailwindcss.com"></script>
   <style type="text/tailwindcss">
-        @keyframes slideRight {
-      0% {
-        transform: translateX(-100%);
-        opacity: 0;
-      }
-      5% {
-        opacity: 1;
-      }
-      90% {
-        opacity: 1;
-      }
-      100% {
-        transform: translateX(100vw);
-        opacity: 0;
-      }
-    }
-
-    .animated-rectangle {
-      position: absolute;
-      height: 3px;
-      width: 30px;
-      animation: slideRight 4s linear infinite;
-      opacity: 0;
-      filter: blur(3px);
-      box-shadow: 
-        0 0 5px rgba(59, 130, 246, 0.9),
-        0 0 10px rgba(59, 130, 246, 0.8),
-        0 0 15px rgba(59, 130, 246, 0.7),
-        0 0 20px rgba(59, 130, 246, 0.6),
-        0 0 30px rgba(59, 130, 246, 0.5),
-        0 0 40px rgba(59, 130, 246, 0.4);
-    }
-
-    .rectangle-1 {
-      top: 15%;
-      animation-delay: 0s;
-      background: linear-gradient(90deg, #86efac 0%, #3b82f6 50%, #9333ea 100%);
-    }
-
-    .rectangle-2 {
-      top: 35%;
-      animation-delay: 2.5s;
-      background: linear-gradient(90deg, #86efac 0%, #3b82f6 50%, #9333ea 100%);
-    }
-
-    .rectangle-3 {
-      top: 55%;
-      animation-delay: 1.2s;
-      background: linear-gradient(90deg, #86efac 0%, #3b82f6 50%, #9333ea 100%);
-    }
-
-    .rectangle-4 {
-      top: 75%;
-      animation-delay: 3.7s;
-      background: linear-gradient(90deg, #86efac 0%, #3b82f6 50%, #9333ea 100%);
-    }
-
-    .rectangle-5 {
-      top: 90%;
-      animation-delay: 0.5s;
-      background: linear-gradient(90deg, #86efac 0%, #3b82f6 50%, #9333ea 100%);
-    }
   </style>
   <script
   src="https://beamanalytics.b-cdn.net/beam.min.js"
@@ -158,40 +96,25 @@
       <!--
       HERO PART
       -->
-      <section class="bg-gray-900 text-white">
-        <!-- Add the animated rectangles -->
-        <div class="animated-rectangle rectangle-1"></div>
-        <div class="animated-rectangle rectangle-2"></div>
-        <div class="animated-rectangle rectangle-3"></div>
-        <div class="animated-rectangle rectangle-4"></div>
-
-        <!-- Add the background image container -->
-        <div class="absolute top-20 inset-0 flex items-center justify-center opacity-40">
-          <img src="./assets/researca-hero.svg" alt="" class="max-w-7xl w-full">
-        </div>
-        
-        <div class="relative mx-auto max-w-screen-xl px-4 py-32 lg:flex lg:h-screen lg:items-center">
-          <div class="mx-auto max-w-3xl text-center">
+      <section class="bg-gray-900 text-white relative">
+        <div class="relative mx-auto max-w-screen-xl px-4 py-16 lg:flex lg:h-screen">
+          <div class="mx-auto max-w-3xl text-center mt-12">
             <h1
               class="bg-gradient-to-r from-green-300 via-blue-500 to-purple-600 bg-clip-text text-3xl font-extrabold text-transparent sm:text-5xl"
             >
               Generate your curation newsletter
-      
               <span class="sm:block"> With our AI assistant. </span>
             </h1>
-      
             <p class="mx-auto mt-4 max-w-xl sm:text-xl/relaxed">
               We're offering a rational, structured and efficient process to bring the hottest news to your audience.
             </p>
-      
             <div class="mt-8 flex flex-wrap justify-center gap-4">
               <a
-                class="block w-full rounded border border-blue-600 bg-blue-600 px-12 py-3 text-sm font-medium text-white hover:bg-transparent hover:text-white focus:outline-none focus:ring active:text-opacity-75 sm:w-auto"
+                class="block w-full rounded border border-green-500 bg-green-500 px-12 py-3 text-sm font-medium text-white hover:bg-transparent hover:text-white focus:outline-none focus:ring active:text-opacity-75 sm:w-auto"
                 href="https://app.researca.com/accounts/signup/"
               >
                 Get Started
               </a>
-      
               <a
                 class="block w-full rounded border border-blue-600 px-12 py-3 text-sm font-medium text-white hover:bg-blue-600 focus:outline-none focus:ring active:bg-blue-500 sm:w-auto"
                 href="#features"
@@ -201,9 +124,17 @@
             </div>
           </div>
         </div>
+        
+        <div class="absolute inset-x-0 bottom-[-10%] flex justify-center z-10">
+          <img 
+            src="./assets/home_page_3.jpg" 
+            alt="App Screenshot" 
+            class="w-3/4 max-w-4xl shadow-2xl rounded-lg transform hover:scale-105 transition-transform duration-300"
+          />
+        </div>
       </section>
-
-      <section class="flex items-center justify-center min-h-screen bg-gray-100 overflow-hidden bg-gray-50 w-full items-center">
+      
+      <section class="flex items-center justify-center min-h-screen bg-gray-100 overflow-hidden bg-gray-50 w-full pt-32">
         <div class="text-center">
           <h2 class="text-2xl font-bold mb-8">Usecases</h2>
           <div class="text-center">
