@@ -24,6 +24,45 @@
       transform: rotate(-1deg); /* Diagonal effect */
     }
   }
+  .video-container {
+      position: relative;
+      width: 100%;
+      max-width: 640px; /* Set your desired width */
+      margin: 0 auto;
+  }
+  .video-thumbnail {
+      cursor: pointer;
+  }
+  .video-thumbnail img {
+      width: 100%;
+      display: block;
+  }
+  .play-button {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 64px;
+      height: 64px;
+      background: rgba(0, 0, 0, 0.6);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+  }
+  .play-button::before {
+      content: '';
+      width: 0;
+      height: 0;
+      border-left: 16px solid white;
+      border-top: 8px solid transparent;
+      border-bottom: 8px solid transparent;
+  }
+  iframe {
+      display: none;
+      width: 100%;
+      height: 360px; /* Adjust height based on aspect ratio */
+  }
 </style>
   <script
   src="https://beamanalytics.b-cdn.net/beam.min.js"
@@ -159,11 +198,33 @@
             </div>
           </div>
           <div class="absolute inset-x-0 sm:bottom-[-80%] md:bottom-[-80%] lg:bottom-[-10%] flex justify-center z-10">
-            <img 
-              src="./assets/home_page_3.jpg" 
-              alt="App Screenshot" 
-              class="w-3/4 max-w-4xl shadow-2xl rounded-lg transform hover:scale-105 transition-transform duration-300"
-            />
+            <!-- Video Container -->
+            <div class="relative w-3/4 max-w-4xl shadow-2xl rounded-lg">
+              <!-- Thumbnail Section -->
+              <div id="thumbnail" class="relative cursor-pointer">
+                <img 
+                  src="./assets/home_page_3.jpg" 
+                  alt="App Screenshot" 
+                  class="w-full rounded-lg transform hover:scale-105 transition-transform duration-300"
+                />
+                <div 
+                  class="absolute inset-0 flex items-center justify-center bg-black bg-opacity-50 rounded-lg">
+                  <div 
+                    class="w-16 h-16 bg-black bg-opacity-60 rounded-full flex items-center justify-center">
+                    <div class="w-0 h-0 border-l-8 border-transparent border-r-8 border-white border-t-4 border-b-4"></div>
+                  </div>
+                </div>
+              </div>
+              <!-- Loom Video Section -->
+              <iframe 
+                id="loomVideo" 
+                class="block hidden w-full h-[555px] rounded-lg" 
+                src="https://www.loom.com/embed/bff12f6ad83448c2ad68dc51ae94c295?sid=9a66725c-e700-451b-b183-0b0cc9922dc1?t=0" 
+                frameborder="0" 
+                allow="fullscreen" 
+                allowfullscreen>
+              </iframe>
+            </div>
           </div>
         </div>
        
@@ -1087,7 +1148,16 @@
   </footer>
   
   
-      
+<script>
+  // JavaScript to toggle thumbnail and video
+  const thumbnail = document.getElementById('thumbnail');
+  const video = document.getElementById('loomVideo');
+
+  thumbnail.addEventListener('click', () => {
+    thumbnail.classList.add('hidden'); // Hide the thumbnail
+    video.classList.remove('hidden'); // Show the video
+  });
+</script>    
       
 </body>
 </html>
