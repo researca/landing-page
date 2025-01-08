@@ -1,0 +1,28 @@
+<!doctype html>
+<html>
+{% include header.html %}
+<body>
+    {% include header_menu.html %}
+    {% include hero.html %}
+    {% include problem_section.html %}
+    {% include use_case.html %}
+    {% include cta.html %}
+    {% include features.html %}
+    {% include testimonials.html %}
+    {% include pricing.html %}
+    {% include faq.html %}
+    {% include footer.html %} 
+  
+<script>
+  // JavaScript to toggle thumbnail and video
+  const thumbnail = document.getElementById('thumbnail');
+  const video = document.getElementById('loomVideo');
+
+  thumbnail.addEventListener('click', () => {
+    thumbnail.classList.add('hidden'); // Hide the thumbnail
+    video.classList.remove('hidden'); // Show the video
+  });
+</script>    
+      
+</body>
+</html>

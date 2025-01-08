@@ -1,0 +1,70 @@
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style type="text/tailwindcss">
+      @layer utilities {
+      .highlight-wavy {
+        position: relative;
+      }
+      .highlight-wavy::before {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 70%;
+        background: #fef08a; /* Highlight Color */
+        opacity: 40%;
+        z-index: 2;
+        border-radius: 20% 30% 30% 20% / 40% 50% 50% 40%; /* Creates uneven edges */
+        transform: rotate(-1deg); /* Diagonal effect */
+      }
+    }
+    .video-container {
+        position: relative;
+        width: 100%;
+        max-width: 640px; /* Set your desired width */
+        margin: 0 auto;
+    }
+    .video-thumbnail {
+        cursor: pointer;
+    }
+    .video-thumbnail img {
+        width: 100%;
+        display: block;
+    }
+    .play-button {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 64px;
+        height: 64px;
+        background: rgba(0, 0, 0, 0.6);
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .play-button::before {
+        content: '';
+        width: 0;
+        height: 0;
+        border-left: 16px solid white;
+        border-top: 8px solid transparent;
+        border-bottom: 8px solid transparent;
+    }
+    iframe {
+        display: none;
+        width: 100%;
+        height: 360px; /* Adjust height based on aspect ratio */
+    }
+  </style>
+    <script
+    src="https://beamanalytics.b-cdn.net/beam.min.js"
+    data-token="65f5dcd8-b94c-4d82-aa34-6bc36f99c13f"
+    async
+    >
+    </script>
+  </head>
