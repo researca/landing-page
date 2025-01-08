@@ -1,0 +1,24 @@
+curl -v -XPOST -H "Content-type: application/json" -d '{
+    "host": "researca.com",
+    "key": "a8f993d284a84636b9c81669b3b5019a",
+    "keyLocation": "https://researca.com/a8f993d284a84636b9c81669b3b5019a.txt",
+    "urlList": [
+        "https://blog.researca.com/",
+        "https://researca.com/",
+        "https://blog.researca.com/researca-roadmap/",
+        "https://blog.researca.com/researca-features/",
+        "https://blog.researca.com/rss-based-learning/",
+        "https://blog.researca.com/10k-hours-rule/",
+        "https://blog.researca.com/must-read-for-data-engineers/",
+        "https://blog.researca.com/repetition-curve/",
+        "https://blog.researca.com/organisation-example/",
+        "https://blog.researca.com/information-overload/",
+        "https://blog.researca.com/3-newsletters-success-stories/",
+        "https://blog.researca.com/seo-guide-for-newsletter-creator/",
+        "https://blog.researca.com/top-5-seo-newsletters-you-can-learn-from/",
+        "https://blog.researca.com/top-5-crypto-newsletters-you-can-learn-from/",
+        "https://blog.researca.com/top-5-food-newsletters-you-can-learn-from/",
+        "https://blog.researca.com/top-5-lifestyle-newsletters-you-can-learn-from/",
+        "https://blog.researca.com/top-5-tech-newsletters-you-can-learn-from/"
+        ]
+}' 'https://www.bing.com/indexnow'
